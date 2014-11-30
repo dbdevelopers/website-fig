@@ -1,0 +1,20 @@
+haproxy:
+  image: barkerd427/haproxy:0.1
+  ports: 
+    - "80:80"
+  links: 
+    - cafezvous
+    - dbdevs
+    - danpluslaura
+cafezvous: 
+  image: barkerd427/cafezvous:0.1
+  ports:
+    - "80"
+dbdevs: 
+  image: barkerd427/dbdevs:0.1
+  ports:
+    - "80"
+danpluslaura: 
+  image: barkerd427/danpluslaura:0.1
+  ports:
+    - "80"
